@@ -2,9 +2,14 @@
     max-width: 100%;
 }
 
+.library {
+    border: 1px solid firebrick;
+    background-image: linear-gradient(to bottom, #fff, #333);
+}
+
 .navheader {
     margin-block-start: 3rem;
-    margin-inline-start: 1rem;
+    margin-inline-start: 4rem;
 }
 
 .navheader .heading {
@@ -19,4 +24,22 @@
     font-weight: 700;
     border: 1px solid firebrick;
     border-radius: 9px;
+}
+
+.lib-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: -1rem;
+}
+
+.titles li {
+    display: inline-block;
+    /* grid-template-columns: 3.25fr 1fr 8fr 0.85fr; */
+    border-bottom: 1px solid red;
+    padding: 1rem 1rem 0.25rem 1rem;
+    margin: 2.5rem;
+    font-size: 1.5rem;
 }
