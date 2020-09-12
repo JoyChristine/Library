@@ -27,6 +27,81 @@
                 </ul>
             </div>
         </div>
+
+        <div class="modal">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="form-title">New Book</h2>
+                    <span class="form-close">&times;</span>
+                </div>
+                <form class="form">
+
+                    <ul>
+                        <li class="form-item"><label class="form__label" for="title">Title</label><input required placeholder="Enter the book title" class="form__input form__input--title" type="text" id="title" name="title"></li>
+                        <li class="form__item"><label class="form__label" for="author">Author</label><input required placeholder="Enter the author" class="form__input form__input--author" type="text" id="author" name="author"></li>
+                        <li class="form__item"><label class="form__label" for="pages">Number of pages</label><input required placeholder="Enter the number of pages" class="form__input form__input--pages" type="number" id="pages" name="pages"></li>
+                        <fieldset class="form__radio-fieldset">
+                            <legend class="form__label form__label--radio">Have you read this book?</legend>
+                            <ul class=form__radio--list>
+                                <li class="form__radio--list-item"><input type="radio" class="form__radio form__radio--read" id="read" name="read" value="read" required><label class="form__label" for="read">Yes</label></li>
+                                <li class="form__radio--list-item"><input type="radio" id="not-read" class="form__radio form__radio--notRead" name="read" value="notRead"><label class="form__label" for="not-read">No</label></li>
+                            </ul>
+                        </fieldset>
+                        <button class="form__submit" type="submit">Submit</button>
+                    </ul>
+                </form>
+            </div>
+            <!-- <style>input[type=text],
+                        select {
+                            width: 100%;
+                            padding: 12px 2px;
+                            margin: 8px 0;
+                            display: block;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                        }
+                        
+                        input[type=submit] {
+                            width: 100%;
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 14px 20px;
+                            margin: 8px 0;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+                        
+                        input[type=submit]:hover {
+                            background-color: #45a049;
+                        }
+                        
+                        div {
+                            border-radius: 5px;
+                            background-color: #f2f2f2;
+                            padding: 2px;
+                            margin-top: 300px;
+                        }
+                    </style>
+                    <div>
+                        <form action="/action_page.php">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div> -->
     </main>
 </body>
 
