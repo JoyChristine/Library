@@ -1,0 +1,22 @@
+.body {
+    max-width: 100%;
+}
+
+.navheader {
+    margin-block-start: 3rem;
+    margin-inline-start: 1rem;
+}
+
+.navheader .heading {
+    font-size: 52px;
+    color: #cc6543;
+}
+
+.nav-btn {
+    margin-block-start: 2rem;
+    padding: 11px 20px;
+    color: #515151;
+    font-weight: 700;
+    border: 1px solid firebrick;
+    border-radius: 9px;
+}
