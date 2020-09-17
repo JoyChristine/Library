@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="index.js"></script>
+
     <title>Library</title>
 </head>
 
@@ -16,7 +16,7 @@
 
             <header class="heading">My Library<i class="fa fa-book" aria-hidden="true"></i></header>
 
-            <button class="nav-btn">Add a Book</button>
+            <button class="mybtn">Add a Book</button>
         </nav>
         <div class="lib-container">
             <div class="lib-list">
@@ -29,11 +29,12 @@
 
                 </ul>
             </div>
-            <!-- <style>
+            <style>
                 .ok {
                     display: grid;
                     grid-template-columns: 1.25fr 1fr 0.65fr 0.75fr 0.1fr;
                     padding: 0.25rem 1rem;
+                    color: white;
                     border-bottom: 1px solid rgba(0, 77, 155, 0.2);
                     margin: 0.5rem;
                 }
@@ -46,30 +47,39 @@
                 <div class="book__property book__read book__read--yes"><button class="book__read-status book__read-status--yes book__read-status--selected">Yes</button><button class="book__read-status book__read-status--no">No</button></div>
                 <span class="book__delete">&times;
                 </span>
-            </div> -->
+            </div>
 
         </div>
-        <div class="modal">
+        <div id="mymodal" class="modal">
             <div class="form-container">
                 <div class="form-header">
-                    <h2 class="form-title">New Book</h2><span class="form-close">&times;
+                    <h2 class="form-title">New Book</h2>
+                    <span class="form-close">&times;
                 </span></div>
                 <form class="form">
                     <ul>
-                        <li class="form-item"><label class="form__label" for="title">Title</label><input required placeholder="Enter the book title" class="form__input form__input--title" type="text" id="title" name="title"></li>
-                        <li class="form__item"><label class="form__label" for="author">Author</label><input required placeholder="Enter the author" class="form__input form__input--author" type="text" id="author" name="author"></li>
-                        <li class="form__item"><label class="form__label" for="pages">Number of pages</label><input required placeholder="Enter the number of pages" class="form__input form__input--pages" type="number" id="pages" name="pages"></li>
+                        <li class="form-item">
+                            <label class="form__label" for="title">Title</label><input required placeholder="Enter the book title" class="form__input form__input--title" type="text" id="title" name="title"></li>
+                        <li class="form__item">
+                            <label class="form__label" for="author">Author</label><input required placeholder="Enter the author" class="form__input form__input--author" type="text" id="author" name="author">
+                        </li>
+                        <li class="form__item">
+                            <label class="form__label" for="pages">Number of pages</label>
+                            <input required placeholder="Enter the number of pages" class="form__input form__input--pages" type="number" id="pages" name="pages"></li>
                         <fieldset class="form__radio-fieldset">
                             <legend class="form__label form__label--radio">Have you read this book?</legend>
                             <ul class=form__radio--list>
                                 <li class="form__radio--list-item"><input type="radio" class="form__radio form__radio--read" id="read" name="read" value="read" required><label class="form__label" for="read">Yes</label></li>
                                 <li class="form__radio--list-item"><input type="radio" id="not-read" class="form__radio form__radio--notRead" name="read" value="notRead"><label class="form__label" for="not-read">No</label></li>
                             </ul>
-                        </fieldset><button class="form__submit" type="submit">Submit</button></ul>
+                        </fieldset><button class="form__submit" type="submit">Submit</button>
+                    </ul>
                 </form>
             </div>
         </div>
     </main>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
