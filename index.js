@@ -128,35 +128,35 @@ function addBook(book, index) {
 
 // // Initialise page load with add function applied to any books in library.
 
-// function addLibrary() {
-//     // This variable identifies all of the current bookDivs displayed in the library. 
-//     let currentDisplayedBookTitles = (Array.from(allBooks)).map(book => book.firstElementChild.textContent);
-//     let currentDisplayedBookAuthors = (Array.from(allBooks)).map(book => book.querySelector(".book__author").textContent);
-//     for (let i = 0; i < myLibrary.length; i++) {
-//         // Check if the current book in myLibrary has a bookDiv. If yes, do nothing. If not, add the book
-//         if (currentDisplayedBookTitles.includes(myLibrary[i].title) && currentDisplayedBookAuthors.includes(myLibrary[i].author)) {
-//             let bookmark = currentDisplayedBookTitles.indexOf(myLibrary[i].title)
-//             allBooks[bookmark].dataset.id = i;
-//         } else {
-//             addBook(myLibrary[i], i);
-//         }
-//     }
-//     // Once all revelant books are added, iterate through the bookDivs to identify any divs to be deleted. 
-//     deleteBooks();
-// }
+function addLibrary() {
+    // This variable identifies all of the current bookDivs displayed in the library. 
+    let currentDisplayedBookTitles = (Array.from(allBooks)).map(book => book.firstElementChild.textContent);
+    let currentDisplayedBookAuthors = (Array.from(allBooks)).map(book => book.querySelector(".book__author").textContent);
+    for (let i = 0; i < myLibrary.length; i++) {
+        // Check if the current book in myLibrary has a bookDiv. If yes, do nothing. If not, add the book
+        if (currentDisplayedBookTitles.includes(myLibrary[i].title) && currentDisplayedBookAuthors.includes(myLibrary[i].author)) {
+            let bookmark = currentDisplayedBookTitles.indexOf(myLibrary[i].title)
+            allBooks[bookmark].dataset.id = i;
+        } else {
+            addBook(myLibrary[i], i);
+        }
+    }
+    // Once all revelant books are added, iterate through the bookDivs to identify any divs to be deleted. 
+    deleteBooks();
+}
 
-// // Function to check for stored libraries and load if present, else load default library
+// Function to check for stored libraries and load if present, else load default library
 
-// window.addEventListener("load", checkStored);
+window.addEventListener("load", checkStored);
 
-// function checkStored() {
-//     if (!localStorage.getItem("myLibrary")) {
-//         addLibrary();
-//     } else {
-//         myLibrary = JSON.parse((localStorage.getItem("myLibrary")));
-//         addLibrary();
-//     }
-// }
+function checkStored() {
+    if (!localStorage.getItem("myLibrary")) {
+        addLibrary();
+    } else {
+        myLibrary = JSON.parse((localStorage.getItem("myLibrary")));
+        addLibrary();
+    }
+}
 
 // // On click of submit button, call function to take user input and create new book object, then add this to library array, then add as HTML. Add to storage as well.
 
