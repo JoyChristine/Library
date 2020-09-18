@@ -80,49 +80,49 @@ window.addEventListener("click", clickOutside);
 
 // Function to add the library array as HTML items (individual books) 
 
-// function addBook(book, index) {
-//     let bookDiv = document.createElement("div");
-//     let deleteBtn = document.createElement("span");
-//     let readStatusBtnYes = document.createElement("button");
-//     let readStatusBtnNo = document.createElement("button");
-//     deleteBtn.classList.add("book__delete");
-//     deleteBtn.innerHTML = "&times;";
-//     bookDiv.classList.add("book");
-//     bookDiv.dataset.id = index;
-//     for (let property in book) {
-//         let bookDetails = document.createElement("div");
-//         if (property === "read" && book[property] === true) {
-//             bookDetails.classList.add("book__read--yes");
-//         } else if (property === "read" && book[property] === false) {
-//             bookDetails.classList.add("book__read--no");
-//         } else {
-//             bookDetails.textContent = book[property];
-//         }
-//         bookDetails.classList.add("book__property");
-//         bookDetails.classList.add(`book__${property}`);
-//         bookDiv.appendChild(bookDetails);
-//     }
-//     let readStatusDiv = bookDiv.querySelector(".book__read");
-//     readStatusDiv.appendChild(readStatusBtnYes);
-//     readStatusBtnYes.textContent = "Yes";
-//     readStatusBtnYes.classList.add("book__read-status");
-//     readStatusBtnYes.classList.add("book__read-status--yes");
-//     readStatusDiv.appendChild(readStatusBtnNo);
-//     readStatusBtnNo.classList.add("book__read-status");
-//     readStatusBtnNo.classList.add("book__read-status--no");
-//     readStatusBtnNo.textContent = "No";
-//     if (readStatusDiv.classList.contains("book__read--yes")) {
-//         readStatusBtnYes.classList.add("book__read-status--selected");
-//     } else {
-//         readStatusBtnNo.classList.add("book__read-status--selected");
-//     }
+function addBook(book, index) {
+    let bookDiv = document.createElement("div");
+    let deleteBtn = document.createElement("span");
+    let readStatusBtnYes = document.createElement("button");
+    let readStatusBtnNo = document.createElement("button");
+    deleteBtn.classList.add("book__delete");
+    deleteBtn.innerHTML = "&times;";
+    bookDiv.classList.add("book");
+    bookDiv.dataset.id = index;
+    for (let property in book) {
+        let bookDetails = document.createElement("div");
+        if (property === "read" && book[property] === true) {
+            bookDetails.classList.add("book__read--yes");
+        } else if (property === "read" && book[property] === false) {
+            bookDetails.classList.add("book__read--no");
+        } else {
+            bookDetails.textContent = book[property];
+        }
+        bookDetails.classList.add("book__property");
+        bookDetails.classList.add(`book__${property}`);
+        bookDiv.appendChild(bookDetails);
+    }
+    let readStatusDiv = bookDiv.querySelector(".book__read");
+    readStatusDiv.appendChild(readStatusBtnYes);
+    readStatusBtnYes.textContent = "Yes";
+    readStatusBtnYes.classList.add("book__read-status");
+    readStatusBtnYes.classList.add("book__read-status--yes");
+    readStatusDiv.appendChild(readStatusBtnNo);
+    readStatusBtnNo.classList.add("book__read-status");
+    readStatusBtnNo.classList.add("book__read-status--no");
+    readStatusBtnNo.textContent = "No";
+    if (readStatusDiv.classList.contains("book__read--yes")) {
+        readStatusBtnYes.classList.add("book__read-status--selected");
+    } else {
+        readStatusBtnNo.classList.add("book__read-status--selected");
+    }
 
-//     bookDiv.appendChild(deleteBtn);
-//     addBookDeleteEvent(deleteBtn);
-//     addReadStatusEvent(readStatusBtnYes);
-//     addReadStatusEvent(readStatusBtnNo);
-//     bookshelf.appendChild(bookDiv);
-// }
+    bookDiv.appendChild(deleteBtn);
+    addBookDeleteEvent(deleteBtn);
+    addReadStatusEvent(readStatusBtnYes);
+    addReadStatusEvent(readStatusBtnNo);
+    bookshelf.appendChild(bookDiv);
+}
 
 
 
